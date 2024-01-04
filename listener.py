@@ -2,7 +2,7 @@ import socketserver
 from http.server import BaseHTTPRequestHandler
 
 HOST = "localhost"
-PORT = "8080"
+PORT = 8080
 
 class TCPHandler(socketserver.BaseRequestHandler):
 
