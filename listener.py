@@ -1,7 +1,7 @@
 import socketserver
 from http.server import BaseHTTPRequestHandler
 
-HOST = "raspberrypi"
+HOST = "raspberrypi.local"
 PORT = 8080
 
 class TCPHandler(socketserver.BaseRequestHandler):
