@@ -18,7 +18,7 @@ class RS232C(serial.Serial):
     #     return data
 
     def send_req(self, cmd, await_response=False, start_seq='!1', end_seq='\r\n'):
-        self.write(bytearray(f"{start_seq}{cmd}{end_seq}"), 'ascii')
+        self.write(bytearray(f"{start_seq}{cmd}{end_seq}", 'ascii'))
         # if await_response:
         #     sleep(0.1)
         #     self.listen()
