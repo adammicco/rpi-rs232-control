@@ -10,7 +10,12 @@ class TCPHandler(socketserver.BaseRequestHandler):
         self.data = self.request.recv(1024).strip()
         self.request.sendall(self.data.upper())
         print(f"{self.client_address[0]}: {self.data.decode()}")
+    
+    def serve(self):
+        with socketserver.TCPServer((HOST, PORT), self) as server:
+            server.serve_forever
 
 if __name__ == "__main__":
-    with socketserver.TCPServer((HOST, PORT), TCPHandler) as server:
-        server.serve_forever()
+    TCPHandler.serve()
+    # with socketserver.TCPServer((HOST, PORT), TCPHandler) as server:
+    #     server.serve_forever()
