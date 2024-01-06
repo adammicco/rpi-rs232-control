@@ -1,5 +1,4 @@
 import socket
-import sys
 import argparse
 
 HOST = "raspberrypi.local"
