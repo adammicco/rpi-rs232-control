@@ -1,6 +1,5 @@
 import glob
 import socketserver
-from http.server import BaseHTTPRequestHandler
 from rs232com import RS232C
 
 HOST = "raspberrypi.local"
